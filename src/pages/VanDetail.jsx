@@ -1,17 +1,17 @@
 import React from 'react'
 import Button from '../components/Common/Button'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const VanDetail = () => {
   const {id} = useParams()
+  const location = useLocation()
   const vanList = useSelector((state) => state.van.vanList);
   const foundVan = vanList.find(van => van.id === id);
-  console.log("foundVan", foundVan);
 
   return (
     <>
-    <Link to="/van" className='px-10'>Back to all vans</Link>
+    <Link to={`..?${location.state?.search}`} relative='path' className='px-10 my-5'>&larr; {`Back to ${location.state.type?location.state.type:"all"} vans`}</Link>
     <div className='grid grid-cols-4 gap-x-10 p-10'>
         <div className='col-span-1'>
             <img src={foundVan.imageUrl} alt='' className='w-full object-cover' />

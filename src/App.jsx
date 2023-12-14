@@ -18,6 +18,9 @@ import HostVansDetail from './pages/Host/HostVansDetail'
 import HostVanPhotos from './pages/Host/HostVanPhotos'
 import HostVanPrice from './pages/Host/HostVanPrice'
 import HostVanInfo from './pages/Host/HostVanInfo'
+import PageNotFound from './pages/PageNotFound'
+import Login from './pages/Login'
+import ProtectedRoute from './ProtectedRoute'
 
 
 function App() {
@@ -31,8 +34,9 @@ function App() {
           <Route index element={<Home/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='van' element={<Van/>}/>
-          <Route path='van-detail/:id' element={<VanDetail/>}/>
-
+          <Route path='van/:id' element={<VanDetail/>}/>
+          <Route path='login' element={<Login/>}/>
+          <Route  element={<ProtectedRoute/>}>
           <Route path='host' element={<HostLayout/>}>
             <Route index element={<Dashboard/>}/>
             <Route path='income' element={<Income/>}/>
@@ -43,10 +47,9 @@ function App() {
               <Route path='pricing' element={<HostVanPrice/>}/>
               <Route path='photos' element={<HostVanPhotos/>}/>
             </Route>
-           
-            
-           
           </Route>
+          </Route>
+          <Route path='*' element={<PageNotFound/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

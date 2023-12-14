@@ -15,7 +15,7 @@ const HostVansList = () => {
 
     {vanList.map((van)=>{
         return(
-            <Link key={van.id} to={`/host/host-vans/${van.id}`} className='flex justify-between items-center bg-[#FFF] p-5 mx-10 my-5'>
+            <Link key={van.id} to={`host-vans/${van.id}`} className='flex justify-between items-center bg-[#FFF] p-5 mx-10 my-5'>
             <div className='flex  items-center '>
                 <div>
                     <img src={van.imageUrl} alt='van' className='w-32' />
