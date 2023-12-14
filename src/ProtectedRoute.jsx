@@ -3,7 +3,7 @@ import { Outlet,Navigate } from 'react-router-dom'
 
 const ProtectedRoute = () => {
     // const navigate = useNavigate
-    const authenticated = false
+    const authenticated = true
     if(!authenticated){
         return <Navigate to="/login" />
     }else{
