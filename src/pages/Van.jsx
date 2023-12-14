@@ -42,16 +42,16 @@ const Van = () => {
         {filterType&&<Link to={handleFilterChange("type",null)} className="bg-[#fff] max-w-xs !text-[#4D4D4D] underline">Clear filters</Link>}
         {/* <button onClick={() => setSearchParams("type=simple")}>Simple</button> */}
     </div>
-    <div className='grid grid-cols-4 gap-10 p-5'>
+    <div className='lg:grid lg:grid-cols-4 lg:gap-10 p-5 mb-10'>
     {vansFilter.map((van)=>{
         return(
-            <Link key={van.id} to={van.id} state={{search: searchParams.toString(), type: filterType}} className='rounded-md transition-transform transform hover:scale-110'>
+            <Link key={van.id} to={van.id} state={{search: searchParams.toString(), type: filterType}} className='rounded-md transition-transform transform hover:scale-110 '>
             <img src={van.imageUrl} alt="" className='w-full object-cover rounded-md'/>
             <div className='flex justify-between items-center my-3 text-[#161616]'>
                 <p className='text-[20px] font-semibold'>{van.name}</p>
                 <p  className='text-[20px] font-semibold'>${van.price}/day</p>
             </div>
-            <Button className={`${van.type==="simple"?"!bg-[#E17654]":van.type==="luxury"?"!bg-[#161616]":"!bg-[#115E59]"}  w-40`}>{van.type}</Button>
+            <Button className={`${van.type==="simple"?"!bg-[#E17654]":van.type==="luxury"?"!bg-[#161616]":"!bg-[#115E59]"} mb-10 lg:mb-0  !w-40`}>{van.type}</Button>
         </Link>
         )
        

@@ -29,11 +29,11 @@ const HostLayout = () => {
   }, []);
   return (
     <>
-    <nav className='bg-[#FFF7ED] p-10'>
-        <NavLink to='.' end  className={({isActive}) => isActive?"underline mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Dashboard</NavLink>
-        <NavLink to='income'  className={({isActive}) => isActive?"underline mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Income</NavLink>
-        <NavLink to='host-vans' className={({isActive}) => isActive?"underline mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Vans</NavLink>
-        <NavLink to='reviews' className={({isActive}) => isActive?"underline mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Reviews</NavLink>
+    <nav className='bg-[#FFF7ED] p-10 '>
+        <NavLink to='.' end  className={({isActive}) => isActive?"underline   lg:mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Dashboard</NavLink>
+        <NavLink to='income'  className={({isActive}) => isActive?"underline   lg:mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Income</NavLink>
+        <NavLink to='host-vans' className={({isActive}) => isActive?"underline  lg:mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Vans</NavLink>
+        <NavLink to='reviews' className={({isActive}) => isActive?"underline  lg:mx-5 text-[16px] font-semibold":"text-[#4D4D4D] mx-5 text-[16px] font-semibold" }>Reviews</NavLink>
     </nav>
     <Outlet/>
     </>
